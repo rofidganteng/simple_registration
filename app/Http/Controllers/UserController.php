@@ -23,7 +23,7 @@ class UserController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'mobile' => ['required', 'mobile_indonesia'],
+            'mobile' => ['required', 'mobile_indonesia', 'unique:users'],
             'first_name' => ['required', 'string'],
             'last_name' => ['required', 'string'],
             'date_birth' => ['date','date_format:Y-m-d'],
