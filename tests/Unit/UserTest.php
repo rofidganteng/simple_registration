@@ -4,16 +4,16 @@ namespace Tests\Unit;
 
 use Tests\TestCase;
 use Faker\Factory;
+use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class UserTest extends TestCase
 {
-    /**
-     * A basic unit test example.
-     *
-     * @return void
-     */
+
+    use DatabaseTransactions;
+
     public function testRegister()
     {
         // Given
